@@ -29,7 +29,10 @@ def cargar_participantes(db_path):
 logo = 'logo.jpg'  # Asegúrate de que el archivo logo.jpg esté en el mismo directorio que tu script
 
 # Mostrar la imagen con el tamaño deseado
-st.image(logo, width=200, height=100)  # Ajusta el ancho y alto según lo necesites
+try:
+    st.image(logo, width=200, height=100)  # Ajusta el ancho y alto según lo necesites
+except Exception as e:
+    st.error(f"Error al cargar la imagen: {e}")
 
 # Título de la app
 st.title("Simulación de Sorteo por Folios")
