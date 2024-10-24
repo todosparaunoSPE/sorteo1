@@ -51,7 +51,8 @@ if uploaded_file is not None:
 
         if st.button("Iniciar sorteo"):
             st.write("Iniciando sorteo...")
-            
+            folio_ganador = None  # Inicializar el folio ganador
+
             # Obtener la lista de folios
             folios = df_participantes['Folio'].tolist()
             
@@ -60,9 +61,9 @@ if uploaded_file is not None:
                 folio_actual = random.choice(folios)
                 folio_display.markdown(f"### Folio: {folio_actual}")
                 time.sleep(0.1)
+                folio_ganador = folio_actual  # Actualizar el folio ganador con el actual
             
-            # Elegir un ganador final
-            folio_ganador = random.choice(folios)
+            # Ahora, folio_ganador contendrá el último folio mostrado
             ganador = df_participantes[df_participantes['Folio'] == folio_ganador].iloc[0]
             
             # Mostrar el ganador
