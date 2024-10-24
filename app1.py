@@ -27,6 +27,9 @@ def cargar_participantes(db_path):
 # Título de la app
 st.title("Simulación de Sorteo por Folios")
 
+# Agregar logo al inicio
+st.image("logo.jpg", use_column_width=True)  # Asegúrate de que el archivo logo.jpg esté en el mismo directorio que tu script.
+
 # Cargar el archivo de base de datos SQLite
 uploaded_file = st.file_uploader("Cargar archivo SQLite (.db)", type=["db"])
 
