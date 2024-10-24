@@ -40,14 +40,10 @@ page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"]{
 background:
-linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-background-color: #131313;
-background-size: 20px 20px;
+      conic-gradient(at 10% 50%,#0000 75%,#141548 0),
+      conic-gradient(at 10% 50%,#0000 75%,#141548 0) calc(1*21px) calc(3*21px),
+      conic-gradient(at 10% 50%,#0000 75%,#141548 0) calc(2*21px) calc(1*21px),
+      conic-gradient(at 10% 50%,#0000 75%,#141548 0) calc(3*21px) calc(4*21px),
 </sytle>
 """
 
