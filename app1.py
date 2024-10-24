@@ -24,7 +24,6 @@ def cargar_participantes(db_path):
     conn.close()
     return participantes
 
-
 # Cargar la imagen
 logo = 'logo.jpg'  # Asegúrate de que el archivo logo.jpg esté en el mismo directorio que tu script
 
@@ -33,8 +32,6 @@ try:
     st.image(logo, width=700)  # Ajusta el ancho según lo necesites
 except Exception as e:
     st.error(f"Error al cargar la imagen: {e}")
-
-
 
 page_bg_img = """
 <style>
@@ -57,11 +54,6 @@ background-size: 105px 105px;
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-
-# Título de la app
-#st.title("Simulación de Sorteo por Folios")
-
-
 # Título en rojo utilizando HTML
 st.markdown(
     """
@@ -70,12 +62,22 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
-
-# Título de la app
-st.title("Simulación de Sorteo por Folios")
-
-
+# Sección de ayuda en la barra lateral
+st.sidebar.markdown(
+    """
+    ### Ayuda
+    Esta aplicación permite realizar un sorteo de folios utilizando una base de datos SQLite que contiene los participantes.
+    
+    **Pasos para utilizar la aplicación:**
+    1. **Cargar archivo SQLite:** Asegúrate de que el archivo contenga una tabla llamada 'participantes' con las columnas 'nombre' y 'folio'.
+    2. **Verificar participantes:** La aplicación mostrará una tabla con los nombres y folios de los participantes.
+    3. **Iniciar el sorteo:** Haz clic en el botón "Iniciar sorteo". La aplicación simulará un desfile de folios y al finalizar mostrará el ganador.
+    4. **Ganador:** El nombre del ganador y su folio serán mostrados al final del sorteo.
+    
+    Si se produce un error al cargar los participantes, se mostrará un mensaje de error.
+    """,
+    unsafe_allow_html=True
+)
 
 # Cargar el archivo de base de datos SQLite
 uploaded_file = st.file_uploader("Cargar archivo SQLite (.db)", type=["db"])
