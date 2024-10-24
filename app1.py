@@ -24,8 +24,9 @@ def cargar_participantes(db_path):
     conn.close()
     return participantes
 
-# Agregar logo al inicio
-st.image("logo.jpg", width=200, height=100)  # Asegúrate de que el archivo logo.jpg esté en el mismo directorio que tu script.
+# Cargar el logo desde un archivo local
+logo = Image.open("logo.jpg")  # Cambia la ruta si es necesario
+st.image(logo, width=200, height=100)  # Ajusta el tamaño según lo necesario
 
 # Título de la app
 st.title("Simulación de Sorteo por Folios")
