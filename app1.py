@@ -28,9 +28,9 @@ def cargar_participantes(db_path):
 # Cargar la imagen
 logo = 'logo.jpg'  # Asegúrate de que el archivo logo.jpg esté en el mismo directorio que tu script
 
-# Mostrar la imagen con el tamaño deseado usando HTML y CSS
+# Mostrar la imagen con el tamaño deseado
 try:
-    st.markdown(f'<img src="{logo}" style="width: 200px; height: 100px;">', unsafe_allow_html=True)
+    st.image(logo, width=700)  # Ajusta el ancho según lo necesites
 except Exception as e:
     st.error(f"Error al cargar la imagen: {e}")
 
