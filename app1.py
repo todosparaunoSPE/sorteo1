@@ -30,7 +30,7 @@ logo = 'logo.jpg'  # Asegúrate de que el archivo logo.jpg esté en el mismo dir
 
 # Mostrar la imagen con el tamaño deseado
 try:
-    st.image(logo, width=800)  # Ajusta el ancho según lo necesites
+    st.image(logo, width=800, heigth=300)  # Ajusta el ancho según lo necesites
 except Exception as e:
     st.error(f"Error al cargar la imagen: {e}")
 
